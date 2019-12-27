@@ -27,7 +27,12 @@ namespace Lambda
 
             int n = 10;
             Test x = (a) => a * n++;
+           
             Console.WriteLine("{0}", x(5));
+            Console.WriteLine("{0}", n);
+
+            Func<int, int> y = a=>a*n++;
+            Console.WriteLine("{0}", y(5));
             Console.WriteLine("{0}", n);
 
             Console.ReadKey();
